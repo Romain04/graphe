@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="graphe.js" defer></script>
+    <link rel="stylesheet" href="graphe.css">
+    <link rel="stylesheet" href="icofont.css">
+    <title>Graphe des assos</title>
+  </head>
+  <body>
+    <main id="mynetwork">
+    </main>
+    <h1>Graphe des Assos</h1>
+    <p id="state"> État: Prêt</p>
+    <menu>
+      <ul>
+        <li onclick="switchTo(0)">
+          <p><span class="icon-settings sideIcon"></span><br/>OPTIONS</p>
+        </li>
+        <div class="line"></div>
+        <li onclick="switchTo(1)">
+          <p><span class="icon-info sideIcon"></span><br/>INFOS</p>
+        </li>
+        <div class="line"></div>
+        <li onclick="switchTo(2)">
+          <p><span class="icon-pro sideIcon"></span><br/>CRÉDITS</p>
+        </li>
+      </ul>
+    </menu>
+    <section id="form">
+      <form>
+        <div>
+          <label><span class="icon-grouppeople"></span> Promotions :</label>
+          <br/>
+          <span id="checks">
+            <span>
+              <input id="p2017" name="p2017" type="checkbox">
+              <label for="p2017">2017</label>
+            </span>
+            <span>
+              <input id="p2018" name="p2018" type="checkbox">
+              <label for="p2018">2018</label>
+            </span>
+            <span>
+              <input id="p2019" name="p2019" type="checkbox">
+              <label for="p2019">2019</label>
+            </span>
+            <span>
+              <input id="p2020" name="p2020" type="checkbox" checked="">
+              <label for="p2020">2020</label>
+            </span>
+            <span>
+              <input id="p2021" name="p2021" type="checkbox" checked="">
+              <label for="p2021">2021</label>
+            </span>
+            <span>
+              <input id="p2022" name="p2022" type="checkbox">
+              <label for="p2022">2022</label>
+            </span>
+          </span>
+        </div>
+        <div id="node">
+          <label for="nodeMin">
+            <span class="icon-nodeSize"></span> Minimum de membres :
+          </label>
+          <br/>
+          <div id="nodeSize">
+            10
+          </div>
+          <br/>
+          <input id="nodeMin" type="range" value="10" min="5" max="50" step="1" oninput="printNode(this.value)">
+        </div>
+        <div id="vertice">
+          <label for="edgeMin">
+            <span class="icon-vertice"></span> Consanguinité :
+          </label>
+          <br/>
+          <div id="verticeSize">
+            5
+          </div>
+          <br/>
+          <input id="edgeMin" type="range" value="5"  min="2" max="30" step="1" oninput="printVertice(this.value)">
+        </div>
+        <br/>
+        <button type="submit">Générer</button>
+      </form>
+    </section>
+    <section id="fonctionnement">
+      <h2>Comment ça fonctionne ?</h2>
+      <p> Lorsqu'on arrive sur le site ou que l'on change l'une des promotions, le site charge les données liées aux promotions. Quand le champ de texte sous le menu indique prêt, vous pouvez générer le graphe en cliquant sur le bouton Générer ci-dessous. Les promotions prises en compte seront les promotions situées entre la promotion minimale et la promotion maximale (inclusion large). Vous pouvez modifier la taille des assos ainsi que la consanguinité minimales, puis générer le graphe à nouveau. Vous pouvez déplacer le graphe ou zoomer dessus pour voir les détails. </p>
+    </section>
+    <section id="credits">
+      <h2> Crédits </h2>
+      <p>
+        Projet : <a href="https://linkcs.fr/user/2018barthezt">@Gr1ing0</a></br>
+        Design : <a href="https://linkcs.fr/user/2019picardr">@merlin1D</a>
+      </p>
+
+    </section>
+  </body>
+</html>

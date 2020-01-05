@@ -1,0 +1,231 @@
+/* graphe.css - 01.2020 */
+
+/*
+  /graphe des assos/ - CSS.
+  index's html page style [v1.0]
+  Developed by Merlin (@merlin1D) - merlin/2020
+*/
+
+@font-face
+{
+  font-family: 'Raleway_Bold';
+  src: url('fonts/Raleway-Bold.ttf');
+  src: url('fonts/Raleway-Bold.ttf?x2elgk');
+}
+
+@font-face
+{
+  font-family: 'Raleway_Regular';
+  src: url('fonts/Raleway-Regular.ttf');
+  src: url('fonts/Raleway-Regular.ttf?x2elgk');
+}
+
+@font-face
+{
+  font-family: 'Noto_Bold';
+  src: url('fonts/NotoSerif-Bold.ttf');
+  src: url('fonts/NotoSerif-Bold.ttf?x2elgk');
+}
+
+@keyframes title
+{
+  0%{letter-spacing: normal;}
+  80%{letter-spacing: 15px;}
+  90%{letter-spacing: -2px;}
+  100%{letter-spacing: normal;}
+}
+
+body,html
+{
+margin: 0px;
+padding: 0px;
+outline: 0px;
+height: 100%;
+overflow: hidden;
+font-family: 'Raleway_Regular', 'Raleway_Bold', verdana, sans-serif;
+font-size: 20px;
+color: #282828;
+background-image: url('pattern/graphy.png'), linear-gradient(#EBEBEB,#EBEBEB);
+}
+
+body > *
+{
+  z-index: 10;
+}
+
+section
+{
+  overflow: auto;
+  z-index: 10;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: calc(20% + 50px);
+  width: calc(60% - 100px);
+  height: 200px;
+  background-color: #2A3342;
+  color: #EBEBEB;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px -10px black;
+  padding: 20px;
+  font-family: 'Raleway_Bold', 'Raleway_Regular', Verdana, sans-serif;
+}
+
+#fonctionnement, #credits
+{
+  visibility: hidden;
+}
+
+menu
+{
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul
+{
+  display: block;
+  position: relative;
+  top: 5%;
+  height: 80%;
+  list-style-type: none;
+  padding: 0;
+}
+
+li
+{
+  cursor: pointer;
+}
+
+li p
+{
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Raleway_Bold', 'Raleway_Regular', Verdana, sans-serif;
+}
+
+.sideIcon
+{
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  border: #D4D4D4 solid 2px;
+  border-radius: 5px;
+  transition: all 150ms ease-in;
+}
+
+li:hover .sideIcon
+{
+  border: double 5px #0079FE;
+  padding: 15px;
+}
+
+li:active .sideIcon
+{
+  border: solid #0079FE 5px;
+  padding: 15px;
+}
+
+.line
+{
+  border: 1px #D4D4D4 solid;
+  width: 0;
+  height: calc((100% - 336px ) / 2);
+  margin: auto;
+}
+
+h1
+{
+  position: relative;
+  text-align: center;
+  font-family: 'Noto_Bold','Raleway_Bold', Arial, serif;
+  cursor: default;
+  text-shadow: 2px 2px 0 white;
+}
+
+h1:hover
+{
+  animation: title 1s ease;
+}
+
+input[type="checkbox"] + label
+{
+  cursor: pointer;
+  padding: 3px 7px;
+  color: #7D8F9D;
+  font-family: 'Raleway_Regular', 'Raleway_Bold', Verdana, sans-serif;
+}
+
+input[type="checkbox"]
+{
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + label
+{
+  color: #0079FE;
+}
+
+#checks
+{
+  display: inline-block;
+  background-color: #1B2233;
+  padding: 10px 20px 10px 0;
+  margin-bottom: 10px;
+  user-select: none;
+  border-radius: 20px;
+}
+
+#node, #vertice
+{
+  display: inline-block;
+  width: 45%;
+}
+
+#nodeSize, #verticeSize
+{
+  display: inline-block;
+  background-color: #1B2233;
+  width: 40px;
+  padding: 5px 5px 10px 5px;
+  border-radius: 20px;
+}
+
+button
+{
+  border: none;
+  background-color: #0079FE;
+  width: 200px;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Raleway_Bold', 'Raleway_Regular', Verdana, sans-serif;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+#state
+{
+  padding-right: 20px;
+  text-align: right;
+}
+
+a
+{
+  color: #0079FE;
+}
+
+#mynetwork
+{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
